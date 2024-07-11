@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -22,6 +22,7 @@ header {
 header h1 {
     margin: 0;
     padding: 0;
+    font-size: 24px;
 }
 
 nav ul {
@@ -40,6 +41,13 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #555;
 }
 
 .cta-button {
@@ -50,6 +58,11 @@ nav ul li a {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #e55340;
 }
 
 main {
@@ -59,7 +72,7 @@ main {
 }
 
 .sidebar {
-    flex: 1 1 20%;
+    flex: 1 1 25%;
     padding: 20px;
     background: #fff;
     margin-right: 20px;
@@ -84,15 +97,17 @@ main {
     display: block;
     padding: 10px;
     border-radius: 5px;
-    transition: background 0.3s;
+    background: #f9f9f9;
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
 .sidebar-menu li a:hover {
     background: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 section {
-    flex: 1 1 75%;
+    flex: 1 1 70%;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -102,6 +117,7 @@ section {
 section h2 {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 24px;
 }
 
 .faq-item {
@@ -113,6 +129,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    margin-top: 20px;
 }
 
 @media (max-width: 768px) {
