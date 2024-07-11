@@ -1,15 +1,13 @@
-/* Base styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    font-size: 18px; /* Slightly larger font size */
+    font-size: 18px;
     line-height: 1.6;
 }
 
-/* Container setup */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -17,7 +15,6 @@ body {
     padding: 20px;
 }
 
-/* Header design */
 header {
     background: linear-gradient(to right, #405de6, #833ab4);
     color: #fff;
@@ -57,14 +54,12 @@ header p {
     background: #388e3c;
 }
 
-/* Main layout with Flexbox */
 main {
     display: flex;
     flex-wrap: wrap;
     padding: 20px 0;
 }
 
-/* Sidebar styling with improved looks */
 .sidebar {
     flex: 1;
     min-width: 250px;
@@ -79,6 +74,13 @@ main {
     margin-right: 10px; /* Adjusted space for better alignment */
 }
 
+.sidebar-toggle {
+    display: none; /* Hidden on desktop */
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
 .sidebar h3 {
     font-size: 20px;
     margin-bottom: 20px;
@@ -87,7 +89,6 @@ main {
     padding-bottom: 10px;
 }
 
-/* Styling for sidebar links */
 .sidebar-menu {
     list-style: none;
     padding: 0;
@@ -114,7 +115,6 @@ main {
     color: #1e88e5;
 }
 
-/* FAQ content styling */
 .faq-content {
     flex: 3;
 }
@@ -160,7 +160,6 @@ main {
     color: #405de6;
 }
 
-/* Footer styling */
 footer {
     background: #303f9f;
     color: #fff;
@@ -169,7 +168,6 @@ footer {
     margin-top: 20px;
 }
 
-/* Media queries for responsive design */
 @media (max-width: 768px) {
     main {
         flex-direction: column;
@@ -177,9 +175,22 @@ footer {
 
     .sidebar {
         margin-bottom: 20px;
+        display: none; /* Hidden by default */
+    }
+
+    .sidebar-toggle {
+        display: flex; /* Visible on mobile */
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
     }
 
     .faq-content .faq-header {
         font-size: 24px;
+    }
+
+    .faq-content {
+        margin-left: 0; /* Remove left margin for small screens */
     }
 }
