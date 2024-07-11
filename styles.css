@@ -23,6 +23,18 @@ header {
     border-bottom: 5px solid #303f9f;
 }
 
+.logo-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo-header img {
+    width: 50px;
+    height: 50px;
+}
+
 header h1 {
     margin: 0;
     font-size: 36px;
@@ -106,7 +118,6 @@ main {
     color: #405de6;
 }
 
-
 .sidebar {
     flex: 1;
     min-width: 250px;
@@ -137,7 +148,6 @@ main {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: block;
 }
 
 .sidebar-menu li {
@@ -161,17 +171,50 @@ main {
     color: #1e88e5;
 }
 
+footer {
+    background: #303f9f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px solid #405de6;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content p,
+.footer-content a {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.footer-content a {
+    text-decoration: none;
+    color: #bbdefb;
+    transition: color 0.3s;
+}
+
+.footer-content a:hover {
+    color: #fff;
+}
+
 .footer-sidebar-toggle {
     position: -webkit-sticky;
     position: sticky;
     bottom: 0;
     width: 100%;
-    background: #303f9f;
+    background: #405de6;
     color: #fff;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     text-align: center;
     display: none;
+    height: 60px;  
 }
 
 .footer-sidebar-toggle .sidebar-toggle {
@@ -180,11 +223,12 @@ main {
     align-items: center;
     cursor: pointer;
     padding: 10px 20px;
+    font-size: 18px; 
 }
 
 .footer-sidebar-toggle .sidebar-toggle h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 20px; 
 }
 
 .footer-sidebar-toggle .sidebar-toggle i {
@@ -225,8 +269,6 @@ main {
         display: block;
     }
 
-    .footer.sidebar,
-    .footer-sidebar-toggle .sidebar-toggle.active,
     .sidebar.active {
         display: block;
     }
