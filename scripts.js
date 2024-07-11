@@ -39,7 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     sidebarToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
-        sidebarToggle.classList.toggle('active');
+        const isActive = sidebar.classList.toggle('active');
+        sidebarToggle.classList.toggle('active', isActive);
+        sidebarToggle.setAttribute('aria-expanded', isActive);
     });
 });
