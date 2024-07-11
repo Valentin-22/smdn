@@ -1,3 +1,4 @@
+/* Base styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -63,72 +64,6 @@ main {
     padding: 20px 0;
 }
 
-/* Sidebar styling with improved looks */
-.sidebar {
-    flex: 1;
-    min-width: 250px;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    position: -webkit-sticky; /* For Safari */
-    position: sticky;
-    top: 20px;
-    height: fit-content;
-    margin-right: 10px; /* Adjusted space for better alignment */
-}
-
-.sidebar-toggle {
-    display: none; /* Hidden on desktop */
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    background: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    color: #405de6; /* Color matching the site's theme */
-}
-
-.sidebar-toggle i {
-    transition: transform 0.3s;
-}
-
-.sidebar h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #303f9f;
-    border-bottom: 2px solid #405de6; /* Added a border for better separation */
-    padding-bottom: 10px;
-}
-
-/* Styling for sidebar links */
-.sidebar-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar-menu li {
-    margin-bottom: 15px;
-}
-
-.sidebar-menu li a {
-    text-decoration: none;
-    color: #405de6;
-    font-size: 16px;
-    display: block;
-    padding: 10px;
-    border-radius: 5px;
-    background: #e3f2fd;
-    transition: background 0.3s, color 0.3s;
-}
-
-.sidebar-menu li a:hover, .sidebar-menu li a.active {
-    background: #bbdefb;
-    color: #1e88e5;
-}
-
 /* FAQ content styling */
 .faq-content {
     flex: 3;
@@ -175,6 +110,74 @@ main {
     color: #405de6;
 }
 
+/* Sidebar styling with improved looks */
+.sidebar {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    margin-right: 10px; /* Adjusted space for better alignment */
+    display: block; /* Ensure it is displayed by default */
+}
+
+.sidebar-toggle {
+    display: flex; /* Shown on mobile */
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    color: #405de6; /* Color matching the site's theme */
+}
+
+.sidebar-toggle i {
+    transition: transform 0.3s;
+}
+
+.sidebar h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #303f9f;
+    border-bottom: 2px solid #405de6; /* Added a border for better separation */
+    padding-bottom: 10px;
+}
+
+/* Styling for sidebar links */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.sidebar-menu li {
+    margin-bottom: 15px;
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: #405de6;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background: #e3f2fd;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar-menu li a:hover, .sidebar-menu li a.active {
+    background: #bbdefb;
+    color: #1e88e5;
+}
+
 /* Footer styling */
 footer {
     background: #303f9f;
@@ -191,13 +194,17 @@ footer {
     }
 
     .sidebar {
-        margin-bottom: 20px;
+        order: 2; /* Move sidebar to the bottom */
         display: none; /* Hidden by default */
-        order: 1; /* Move sidebar to the bottom */
     }
 
     .sidebar-toggle {
         display: flex; /* Visible on mobile */
+        order: 1; /* Order toggle to the top on mobile */
+    }
+
+    .sidebar-toggle.active i {
+        transform: rotate(180deg); /* Rotate the icon when active */
     }
 
     .faq-content .faq-header {
@@ -206,5 +213,9 @@ footer {
 
     .faq-content {
         margin-left: 0; /* Remove left margin for small screens */
+    }
+
+    .sidebar.active {
+        display: block; /* Show sidebar when active */
     }
 }
