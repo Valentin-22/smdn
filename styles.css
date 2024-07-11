@@ -179,48 +179,50 @@ footer {
     margin-top: 20px;
 }
 
+.footer-sidebar-toggle {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background: #303f9f;
+    color: #fff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     main {
         flex-direction: column;
     }
 
     .sidebar {
+        display: none;
         position: fixed;
         bottom: 0;
         left: 0;
         right: 0;
-        top: auto;
-        flex: none;
+        height: auto;
         margin: 0;
-        padding: 0;
-        border-radius: 0;
-        display: none;
+        padding: 10px 20px;
         box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     }
     
-    .sidebar ul {
-        padding: 10px 20px;
+    .sidebar-menu {
+        padding: 20px 0;
     }
 
-    .sidebar-toggle {
+    .footer-sidebar-toggle .sidebar-toggle {
         display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
         background: #303f9f;
         color: #fff;
-        padding: 10px 20px;
-        text-align: center;
-        z-index: 1000;
+    }
+
+    .sidebar-menu li a.active {
+        background: #b3e5fc;
     }
 
     .sidebar-toggle.active i {
         transform: rotate(180deg);
-    }
-
-    .faq-content {
-        margin-left: 0;
     }
 
     .sidebar.active {
