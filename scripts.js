@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     window.addEventListener('scroll', () => {
-        let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop + offset*2;
+        let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop + offset * 2;
         sections.forEach(section => {
             if (section.offsetTop <= scrollPosition && (section.offsetTop + section.clientHeight) > scrollPosition) {
                 links.forEach(link => {
