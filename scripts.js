@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Hide sidebar menu after clicking a link on mobile
             if (window.innerWidth <= 768) {
                 sidebarMenu.style.display = 'none';
+                sidebarToggle.querySelector('i').classList.remove('fa-arrow-up');
+                sidebarToggle.querySelector('i').classList.add('fa-arrow-down');
             }
         });
     });
