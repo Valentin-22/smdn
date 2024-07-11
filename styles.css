@@ -85,7 +85,7 @@ main {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .faq-item h3 {
@@ -106,13 +106,14 @@ main {
     color: #405de6;
 }
 
+
 .sidebar {
     flex: 1;
     min-width: 250px;
     padding: 20px;
     background: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: -webkit-sticky;
     position: sticky;
     top: 20px;
@@ -120,23 +121,11 @@ main {
     margin-right: 10px;
 }
 
-.sidebar-toggle {
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    background: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    color: #405de6;
+.sidebar-title {
+    text-align: center;
 }
 
-.sidebar-toggle i {
-    transition: transform 0.3s;
-}
-
-.sidebar h3 {
+.sidebar-title h3 {
     font-size: 20px;
     margin-bottom: 20px;
     color: #303f9f;
@@ -160,26 +149,20 @@ main {
     color: #405de6;
     font-size: 16px;
     display: block;
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 5px;
     background: #e3f2fd;
     transition: background 0.3s, color 0.3s;
 }
 
-.sidebar-menu li a:hover, .sidebar-menu li a.active {
+.sidebar-menu li a:hover,
+.sidebar-menu li a.active {
     background: #bbdefb;
     color: #1e88e5;
 }
 
-footer {
-    background: #303f9f;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
-}
-
 .footer-sidebar-toggle {
+    position: -webkit-sticky;
     position: sticky;
     bottom: 0;
     width: 100%;
@@ -188,6 +171,28 @@ footer {
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     text-align: center;
+    display: none;
+}
+
+.footer-sidebar-toggle .sidebar-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.footer-sidebar-toggle .sidebar-toggle h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.footer-sidebar-toggle .sidebar-toggle i {
+    transition: transform 0.3s;
+}
+
+.footer-sidebar-toggle .sidebar-toggle.active i {
+    transform: rotate(180deg);
 }
 
 @media (max-width: 768px) {
@@ -198,33 +203,30 @@ footer {
     .sidebar {
         display: none;
         position: fixed;
-        bottom: 0;
+        bottom: 60px; 
         left: 0;
         right: 0;
         height: auto;
         margin: 0;
-        padding: 10px 20px;
+        padding: 10px 0;
+        border-radius: 8px;
         box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     }
-    
+
     .sidebar-menu {
-        padding: 20px 0;
+        padding: 0 20px;
     }
 
-    .footer-sidebar-toggle .sidebar-toggle {
-        display: flex;
-        background: #303f9f;
-        color: #fff;
+    .faq-content {
+        margin-left: 0;
     }
 
-    .sidebar-menu li a.active {
-        background: #b3e5fc;
+    .footer-sidebar-toggle {
+        display: block;
     }
 
-    .sidebar-toggle.active i {
-        transform: rotate(180deg);
-    }
-
+    .footer.sidebar,
+    .footer-sidebar-toggle .sidebar-toggle.active,
     .sidebar.active {
         display: block;
     }
