@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('.sidebar-menu a');
     const sections = document.querySelectorAll('.faq-item');
-    const sidebarMenu = document.querySelector('.sidebar-menu');
     const sidebar = document.querySelector('.sidebar');
-    const sidebarToggle = document.querySelector('.sidebar-toggle');
+    const sidebarToggle = document.querySelector('.footer-sidebar-toggle .sidebar-toggle');
     const offset = 20;
 
     links.forEach(link => {
