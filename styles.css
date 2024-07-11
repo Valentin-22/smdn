@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 .container {
@@ -13,48 +14,33 @@ body {
 }
 
 header {
-    background: #333;
+    background: linear-gradient(to right, #009688, #00bcd4);
     color: #fff;
-    padding: 10px 0;
+    padding: 40px 0;
     text-align: center;
+    border-bottom: 5px solid #00796b;
 }
 
 header h1 {
     margin: 0;
-    padding: 0;
+    font-size: 36px;
+}
+
+header h2 {
+    margin: 10px 0;
     font-size: 24px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+header p {
     font-size: 16px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-nav ul li a:hover {
-    background: #555;
+    margin: 0 0 20px;
 }
 
 .cta-button {
     display: inline-block;
     background: #ff6347;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
@@ -67,17 +53,25 @@ nav ul li a:hover {
 
 main {
     display: flex;
-    flex-wrap: wrap;
     padding: 20px 0;
 }
 
 .sidebar {
     flex: 1 1 25%;
     padding: 20px;
-    background: #fff;
-    margin-right: 20px;
+    background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    overflow: auto;
+}
+
+.sidebar h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #00796b;
 }
 
 .sidebar-menu {
@@ -92,36 +86,55 @@ main {
 
 .sidebar-menu li a {
     text-decoration: none;
-    color: #333;
+    color: #00796b;
     font-size: 16px;
     display: block;
     padding: 10px;
     border-radius: 5px;
-    background: #f9f9f9;
-    transition: background 0.3s, box-shadow 0.3s;
+    background: #e0f2f1;
+    transition: background 0.3s, color 0.3s;
 }
 
 .sidebar-menu li a:hover {
-    background: #f0f0f0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: #b2dfdb;
+    color: #004d40;
 }
 
-section {
-    flex: 1 1 70%;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.faq-content {
+    flex: 1 1 75%;
 }
 
-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
+.faq-content img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 .faq-item {
+    background: #ffffff;
+    padding: 20px;
     margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.faq-item h3 {
+    margin-top: 0;
+    color: #00796b;
+    font-size: 20px;
+}
+
+.faq-item p {
+    font-size: 16px;
+}
+
+.faq-item ol {
+    padding-left: 20px;
+}
+
+.faq-item a {
+    color: #009688;
 }
 
 footer {
@@ -133,20 +146,28 @@ footer {
 }
 
 @media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
     .sidebar {
         flex: 1 1 100%;
         margin-bottom: 20px;
     }
 
-    section {
+    .faq-content {
         flex: 1 1 100%;
     }
 
-    nav ul {
-        flex-direction: column;
+    header h1 {
+        font-size: 28px;
     }
 
-    nav ul li {
-        margin: 10px 0;
+    header h2 {
+        font-size: 20px;
+    }
+
+    header p {
+        font-size: 14px;
     }
 }
