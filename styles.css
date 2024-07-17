@@ -85,7 +85,7 @@ main {
 
 .faq-content {
     flex: 3;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .faq-content .faq-header {
@@ -135,6 +135,7 @@ main {
 }
 
 .sidebar {
+    order: -1; /* Ensure the sidebar comes before the main content */
     flex: 1;
     min-width: 250px;
     padding: 20px;
@@ -145,7 +146,7 @@ main {
     position: sticky;
     top: 20px;
     height: fit-content;
-    margin-right: 10px;
+    margin-left: 10px; /* Ensure it is separated from the main content */
 }
 
 .sidebar-title {
@@ -264,6 +265,7 @@ footer {
     .sidebar {
         display: none;
         position: fixed;
+        top: auto;
         bottom: 60px;
         left: 0;
         right: 0;
@@ -279,7 +281,7 @@ footer {
     }
 
     .faq-content {
-        margin-left: 0;
+        margin-right: 0;
     }
 
     .footer-sidebar-toggle {
