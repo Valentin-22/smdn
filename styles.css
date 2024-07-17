@@ -8,6 +8,10 @@ body {
     line-height: 1.6;
 }
 
+.container .paperform-container {
+    margin-top: 20px;
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
