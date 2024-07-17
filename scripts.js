@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebarToggle.setAttribute('aria-expanded', isActive);
     });
 
-    // Ensure Paperform script is loaded
     const paperformScript = document.createElement('script');
     paperformScript.src = "https://paperform.co/__embed.min.js";
     paperformScript.onload = function() {
