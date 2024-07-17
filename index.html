@@ -17,11 +17,14 @@
             </div>
             <h2>Contact Us for Priority Support</h2>
             <p>Do you have an issue with a Smodin transaction? Let our dedicated support team assist you! By contacting us here, you will receive prioritized assistance and swift resolution to your concerns.</p>
+            <button id="priority-support-button" class="cta-button">CLICK HERE</button>
         </div>
     </header>
     <main>
         <div class="container">
-            <div data-paperform-id="smodinbilling"></div>
+            <div id="paperform-container" class="paperform-container" style="display: none;">
+                <div data-paperform-id="bc8d3hn6"></div>
+            </div>
             <script>
                 (function() {
                     var script = document.createElement('script');
@@ -105,5 +108,10 @@
         </div>
     </div>
     <script src="scripts.js"></script>
+    <script>
+        document.getElementById('priority-support-button').addEventListener('click', function() {
+            document.getElementById('paperform-container').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
